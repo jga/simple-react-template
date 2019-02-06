@@ -1,0 +1,27 @@
+# Vim
+*.swp
+*.swo
+
+# IntelliJ
+.idea
+*.iml
+
+# Mac
+.DS_Store
+
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+/build
+/.sass-cache
+/connect.lock
+/coverage/*
+/*.log
+*.lock
+
