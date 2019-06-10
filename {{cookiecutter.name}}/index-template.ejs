@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="<%= htmlWebpackPlugin.options.appDescription %>">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.appDescription %>" data-app-version=<%= htmlWebpackPlugin.options.appVersion %>>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <div id='<%= htmlWebpackPlugin.options.appId %>'></div>
   </body>
 </html>
+
+
+

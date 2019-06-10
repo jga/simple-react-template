@@ -1,0 +1,28 @@
+$screen-mins: (
+  'phab': (min-width: 425px),
+  'tab': (min-width: 750px),
+  'pc' : (min-width: 1024px)
+);
+/*
+ * Within a selector's block, you can use the $screen-mins in _config.scss to create
+ * breakpoint syntax like this:
+ *
+ * @include breakpoint('phab') {}
+ * @include breakpoint('tab') {}
+ * @include breakpoint('pc') {}
+ */
+@mixin breakpoint($min-w) {
+  // If the key exists in the $screen-mins "global" map defined in _config.scss
+  @if map-has-key($screen-mins, $min-w) {
+    // Prints a media query based on the value paired with the  $min-w key in $screen-mins
+    @media #{inspect(map-get($screen-mins, $min-w))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no matching value for `#{$min-w}` could be retrieved from `#{$screen-mins}`. "
+      + "Please make sure `#{$min-w}` is defined in `$screen-mins` map.";
+  }
+}

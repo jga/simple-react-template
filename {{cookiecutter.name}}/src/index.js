@@ -14,4 +14,4 @@ const Main = () => (
   </Provider>
 )
 
-render(<Main />, document.getElementById('app'))
+render(<Main />, document.getElementById('application-container'))

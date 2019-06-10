@@ -27,5 +27,7 @@
 /coverage/*
 /*.log
 *.lock
-/misc
+
+# Local-only
+_local/
 
